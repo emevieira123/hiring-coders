@@ -60,3 +60,12 @@ function erro(mensagem: string): never {
 function falha() {
   return erro('Algo falhou');
 }
+
+//Union Types
+
+function exibirNota(nota: number | string) {
+  console.log(`A nota é ${nota}`);
+}
+
+exibirNota('10');
+exibirNota(10);
