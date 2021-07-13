@@ -1,20 +1,8 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-//import './App.css';
+import React from 'react';
+import Routes from './routes';
 
-function App(props) {
-  const [usuario, setUsuario] = useState('');
-
-  function handlePesquisa() {
-    axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => console.log(response.data));
-  }
-
+export default function App(props) {
   return (
-    <>
-      <input className="usuarioInput" placeholder="Usuário" value={usuario} onChange={e => setUsuario(e.target.value)} />
-      <button type="button" onClick={handlePesquisa}>Pequisar</button>
-    </>
+    <Routes />
   );
 }
-
-export default App;
